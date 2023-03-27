@@ -1,20 +1,20 @@
 app-id: net.waterfox.waterfox
 runtime: org.freedesktop.Platform
-runtime-version: "22.08"
+runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 command: waterfox
 finish-args:
-  - "--share=ipc"
-  - "--socket=wayland"
-  - "--socket=fallback-x11"
-  - "--filesystem=xdg-download:rw"
-  - "--persist=.waterfox"
-  - "--share=network"
-  - "--socket=pulseaudio"
-  - "--device=all"
-  - "--talk-name=org.freedesktop.Notifications"
-  - "--talk-name=org.freedesktop.FileManager1"
-  - "--talk-name=org.freedesktop.ScreenSaver"
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --filesystem=xdg-download:rw
+  - --persist=.waterfox
+  - --share=network
+  - --socket=pulseaudio
+  - --device=all
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.freedesktop.FileManager1
+  - --talk-name=org.freedesktop.ScreenSaver
 modules:
   - shared-modules/dbus-glib/dbus-glib.json
   - name: waterfox
@@ -23,14 +23,15 @@ modules:
       - mkdir /app/opt
       - cp -r waterfox/ /app/opt/waterfox
       - desktop-file-install --dir /app/share/applications net.waterfox.waterfox.desktop
-      - install -Dm644 /app/opt/waterfox/browser/chrome/icons/default/default256.png /app/share/icons/hicolor/256x256/apps/net.waterfox.waterfox.png
+      - install -Dm644 /app/opt/waterfox/browser/chrome/icons/default/default256.png
+        /app/share/icons/hicolor/256x256/apps/net.waterfox.waterfox.png
       - install -Dm644 net.waterfox.waterfox.appdata.xml -t /app/share/appdata
       - install -Dm644 flatpak-prefs.js -t /app/opt/waterfox/browser/defaults/preferences/
       - ln -sf /app/opt/waterfox/waterfox-bin /app/bin/waterfox
     sources:
       - type: archive
-        url: https://cdn1.waterfox.net/waterfox/releases/G5.1.3/Linux_x86_64/waterfox-G5.1.3.tar.bz2
-        sha256: 1f0d188950765ed2be0e619dc9327306d09247474e3ad6c9addd230956d48ce8
+        url: https://cdn1.waterfox.net/waterfox/releases/G5.1.4/Linux_x86_64/waterfox-G5.1.4.tar.bz2
+        sha256: a005a4830332c354697b9c6a107244cbc15772f05e8085a50e48ba82364fae15
         dest: waterfox
         x-checker-data:
           type: html
