@@ -57,10 +57,13 @@
   </screenshots>
 
   <releases>
-    <release version="5.1.5" date="2023-04-13"/>
+    <release version="G5.1.5" date="2023-04-13"/>
+      <description>
+        <p>Various Security Fixes.</p>
+      </desctiption>
     <release version="G5.1.4" date="2023-03-24">
       <description>
-        <p>Fix concurrency.</p>
+        <p>Various Security Fixes.</p>
       </description>
     </release>
     <release version="G5.1.3" date="2023-02-20"/>
