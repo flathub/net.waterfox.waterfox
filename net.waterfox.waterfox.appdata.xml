@@ -57,6 +57,7 @@
   </screenshots>
 
   <releases>
+    <release version="5.1.5" date="2023-04-13"/>
     <release version="G5.1.4" date="2023-03-24">
       <description>
         <p>Fix concurrency.</p>
