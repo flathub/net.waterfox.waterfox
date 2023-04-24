@@ -17,7 +17,7 @@ finish-args:
   - --talk-name=org.freedesktop.FileManager1
   - --talk-name=org.freedesktop.ScreenSaver
   - --talk-name=org.a11y.bus
-  - --own-name="net.waterfox.waterfox.*
+  - --own-name=net.waterfox.waterfox.*
   - --command=waterfox
 modules:
   - shared-modules/dbus-glib/dbus-glib.json
