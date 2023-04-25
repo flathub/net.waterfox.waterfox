@@ -31,7 +31,7 @@ modules:
         /app/share/icons/hicolor/256x256/apps/net.waterfox.waterfox.png
       - install -Dm644 net.waterfox.waterfox.appdata.xml -t /app/share/appdata
       - install -Dm644 flatpak-prefs.js -t /app/opt/waterfox/browser/defaults/preferences/
-      - ln -sf /app/opt/waterfox/waterfox-bin /app/bin/waterfox
+      - install -D -m755 launch-script.sh "/app/bin/waterfox"
     sources:
       - type: archive
         url: https://cdn1.waterfox.net/waterfox/releases/G5.1.5/Linux_x86_64/waterfox-G5.1.5.tar.bz2
@@ -48,3 +48,5 @@ modules:
         path: net.waterfox.waterfox.desktop
       - type: file
         path: flatpak-prefs.js
+      - type: file
+        path: launch.sh
