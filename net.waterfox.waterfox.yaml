@@ -2,19 +2,23 @@ app-id: net.waterfox.waterfox
 runtime: org.freedesktop.Platform
 runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
-command: waterfox
+command: waterfox 
 finish-args:
   - --share=ipc
-  - --socket=wayland
-  - --socket=fallback-x11
-  - --filesystem=xdg-download:rw
-  - --persist=.waterfox
   - --share=network
   - --socket=pulseaudio
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=cups
+  - --persist=.waterfox
+  - --filesystem=xdg-download:rw
   - --device=all
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.FileManager1
   - --talk-name=org.freedesktop.ScreenSaver
+  - --talk-name=org.a11y.bus
+  - --own-name=org.mozilla.waterfox.*
+  - --own-name=org.mpris.MediaPlayer2.firefox.*
 modules:
   - shared-modules/dbus-glib/dbus-glib.json
   - name: waterfox

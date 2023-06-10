@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- This Flatpak is maintained with <3 by FloridaMan7588 -->
+<!-- Thanks to all of the contributors and the wonderful upstream Waterfox Project -->
 <component type="desktop-application">
   <id>net.waterfox.waterfox</id>
 
@@ -38,7 +40,7 @@
   <launchable type="desktop-id">net.waterfox.waterfox.desktop</launchable>
 
   <url type="homepage">https://www.waterfox.net/</url>
-  <url type="bugtracker">https://github.com/waterfoxco/waterfox/issues</url>
+  <url type="bugtracker">https://github.com/flathub/net.waterfox.waterfox</url>
   <url type="help">https://waterfox.net/support/category/linux</url>
 
   <content_rating type="oars-1.1"/>
