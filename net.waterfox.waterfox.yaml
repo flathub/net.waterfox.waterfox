@@ -18,7 +18,6 @@ finish-args:
   - --talk-name=org.freedesktop.ScreenSaver
   - --talk-name=org.a11y.bus
   - --own-name=org.mozilla.waterfox.*
-  - --own-name=net.waterfox.waterfox.*
   - --own-name=org.mpris.MediaPlayer2.firefox.*
 modules:
   - shared-modules/dbus-glib/dbus-glib.json
