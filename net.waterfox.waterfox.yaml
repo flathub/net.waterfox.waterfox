@@ -2,7 +2,7 @@ app-id: net.waterfox.waterfox
 runtime: org.freedesktop.Platform
 runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
-command: waterfox 
+command: waterfox
 finish-args:
   - --share=ipc
   - --share=network
@@ -34,8 +34,8 @@ modules:
       - ln -sf /app/opt/waterfox/waterfox-bin /app/bin/waterfox
     sources:
       - type: archive
-        url: https://cdn1.waterfox.net/waterfox/releases/G5.1.8/Linux_x86_64/waterfox-G5.1.8.tar.bz2
-        sha256: 50dde686d8370d2ec6847cc411c907819ef83fc9130350e7857729a5b154ccc3
+        url: https://cdn1.waterfox.net/waterfox/releases/G5.1.9/Linux_x86_64/waterfox-G5.1.9.tar.bz2
+        sha256: 6f0a060882b28c0542c721684e687555a896eab968b3f00e01414c633933939d
         dest: waterfox
         x-checker-data:
           type: html
