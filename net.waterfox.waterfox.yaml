@@ -3,6 +3,8 @@ runtime: org.freedesktop.Platform
 runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 command: waterfox
+platform-extensions:
+  - org.freedesktop.Platform.ffmpeg-full
 finish-args:
   - --share=ipc
   - --share=network
