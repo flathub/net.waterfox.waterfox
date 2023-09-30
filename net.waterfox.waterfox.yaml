@@ -35,7 +35,7 @@ modules:
     sources:
       - type: archive
         url: https://cdn1.waterfox.net/waterfox/releases/G6.0.1/Linux_x86_64/waterfox-G6.0.1.tar.bz2
-        sha256: ab73e5034363e89a62fff8ca4917f38faa37a1d5e91f185b5f62074815b98b59
+        sha256: cf115b8067130d4cad187fa3c1606f34964084d9b8efa166104a2c93711bf67e
         dest: waterfox
         x-checker-data:
           type: html
