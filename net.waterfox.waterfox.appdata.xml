@@ -5,6 +5,10 @@
   <name>Waterfox</name>
   <summary>A lightweight, free and open source web browser built for the modern web</summary>
   
+  <developer id="net.waterfox">
+    <name>BrowserWorks Ltd.</name>
+  </developer>
+
   <metadata_license>FSFAP</metadata_license>
   <project_license>MPL-2.0</project_license>
   
