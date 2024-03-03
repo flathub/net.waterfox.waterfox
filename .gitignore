@@ -1,1 +1,5 @@
 .vscode/
+.flatpak/
+.flatpak-builder/
+build/
+repo/
