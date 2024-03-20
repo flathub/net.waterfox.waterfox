@@ -41,8 +41,8 @@ modules:
       - ln -sf /app/opt/waterfox/waterfox-bin /app/bin/waterfox
     sources:
       - type: archive
-        url: https://cdn1.waterfox.net/waterfox/releases/G6.0.9/Linux_x86_64/waterfox-G6.0.9.tar.bz2
-        sha256: c49ff72fe7baf954d413f0fd4b0b4281fb43af073e76064b4f99ec160eccb424
+        url: https://cdn1.waterfox.net/waterfox/releases/G6.0.10/Linux_x86_64/waterfox-G6.0.10.tar.bz2
+        sha256: 64f095cb3126b3ae2a3c7fa2a0202e39538003598a46c98d1c16501e2877eaf2
         dest: waterfox
         x-checker-data:
           type: html
