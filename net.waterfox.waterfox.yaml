@@ -1,11 +1,11 @@
 app-id: net.waterfox.waterfox
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: waterfox
 add-extensions:
   org.freedesktop.Platform.ffmpeg-full:
-    version: '23.08'
+    version: '24.08'
     directory: lib/ffmpeg
     add-ld-path: .
 cleanup-commands:
@@ -41,14 +41,14 @@ modules:
       - ln -sf /app/opt/waterfox/waterfox-bin /app/bin/waterfox
     sources:
       - type: archive
-        url: https://cdn1.waterfox.net/waterfox/releases/G6.0.20/Linux_x86_64/waterfox-G6.0.20.tar.bz2
-        sha256: 7035d9cd1ecdd13c7728a9f918638afd5e322422b53e3c3b4b89e26b6361e342
+        url: https://cdn1.waterfox.net/waterfox/releases/6.5.2/Linux_x86_64/waterfox-6.5.2.tar.bz2
+        sha256: b023a872065b33831cf2601f133e143c9f1ad9a81e9a800b2398d50cfeb40c1f
         dest: waterfox
         x-checker-data:
           type: html
           url: https://waterfox.net/download
-          version-pattern: G([0-9].[0-9]+[0-9]*.[0-9]+)
-          url-template: https://cdn1.waterfox.net/waterfox/releases/G$version/Linux_x86_64/waterfox-G$version.tar.bz2
+          version-pattern: ([0-9].[0-9]+[0-9]*.[0-9]+)
+          url-template: https://cdn1.waterfox.net/waterfox/releases/G$version/Linux_x86_64/waterfox-$version.tar.bz2
       - type: file
         path: net.waterfox.waterfox.appdata.xml
       - type: file
