@@ -41,14 +41,14 @@ modules:
       - ln -sf /app/opt/waterfox/waterfox-bin /app/bin/waterfox
     sources:
       - type: archive
-        url: https://cdn1.waterfox.net/waterfox/releases/6.5.2/Linux_x86_64/waterfox-6.5.2.tar.bz2
-        sha256: b023a872065b33831cf2601f133e143c9f1ad9a81e9a800b2398d50cfeb40c1f
+        url: https://cdn1.waterfox.net/waterfox/releases/6.5.3/Linux_x86_64/waterfox-6.5.3.tar.bz2
+        sha256: 228eeb1cac219b06a2bb8dfa3d2ad0e93afc9eee516bd62d27a76be2fd740969
         dest: waterfox
         x-checker-data:
           type: html
           url: https://waterfox.net/download
           version-pattern: ([0-9].[0-9]+[0-9]*.[0-9]+)
-          url-template: https://cdn1.waterfox.net/waterfox/releases/G$version/Linux_x86_64/waterfox-$version.tar.bz2
+          url-template: https://cdn1.waterfox.net/waterfox/releases/$version/Linux_x86_64/waterfox-$version.tar.bz2
       - type: file
         path: net.waterfox.waterfox.appdata.xml
       - type: file
