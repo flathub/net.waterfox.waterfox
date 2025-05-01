@@ -47,7 +47,7 @@ modules:
         x-checker-data:
           type: html
           url: https://waterfox.net/download
-          version-pattern: ([0-9].[0-9]+[0-9]*.[0-9]+)
+          version-pattern: (\d+\.\d+\.\d+) \(Latest\)
           url-template: https://cdn1.waterfox.net/waterfox/releases/$version/Linux_x86_64/waterfox-$version.tar.bz2
       - type: file
         path: net.waterfox.waterfox.appdata.xml
