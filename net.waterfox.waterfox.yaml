@@ -36,7 +36,7 @@ modules:
       - desktop-file-install --dir /app/share/applications net.waterfox.waterfox.desktop
       - install -Dm644 /app/opt/waterfox/browser/chrome/icons/default/default256.png
         /app/share/icons/hicolor/256x256/apps/net.waterfox.waterfox.png
-      - install -Dm644 net.waterfox.waterfox.appdata.xml -t /app/share/appdata
+      - install -Dm644 net.waterfox.waterfox.metainfo.xml -t /app/share/metainfo
       - install -Dm644 flatpak-prefs.js -t /app/opt/waterfox/browser/defaults/preferences/
       - ln -sf /app/opt/waterfox/waterfox-bin /app/bin/waterfox
     sources:
@@ -50,7 +50,7 @@ modules:
           version-pattern: (\d+\.\d+\.\d+) \(Latest\)
           url-template: https://cdn1.waterfox.net/waterfox/releases/$version/Linux_x86_64/waterfox-$version.tar.bz2
       - type: file
-        path: net.waterfox.waterfox.appdata.xml
+        path: net.waterfox.waterfox.metainfo.xml
       - type: file
         path: net.waterfox.waterfox.desktop
       - type: file
