@@ -46,6 +46,7 @@ modules:
         dest: waterfox
         x-checker-data:
           type: html
+          is-main-source: true
           url: https://waterfox.net/download
           version-pattern: (\d+\.\d+\.\d+) \(Latest\)
           url-template: https://cdn1.waterfox.net/waterfox/releases/$version/Linux_x86_64/waterfox-$version.tar.bz2
