@@ -20,13 +20,13 @@
       Waterfox gives you a sane way to browse the web. Built with you, the user, in mind.
     </p>
     <p>
-      Waterfox&apos;s Enhanced Tracking Protection safeguards your privacy while you surf. It prevents trackers from following you around the internet and collecting data about your browsing habits and interests without interfering with site operation. It also protects you from malicious programmes like malware that drain your battery.
+      Waterfox's Enhanced Tracking Protection safeguards your privacy while you surf. It prevents trackers from following you around the internet and collecting data about your browsing habits and interests without interfering with site operation. It also protects you from malicious programmes like malware that drain your battery.
     </p>
     <p>
       Private Browsing does not save your browsing data, such as history or cookies, and does not leave a trail once you log out. Waterfox also includes Enhanced Tracking Protection, which stops hidden trackers from collecting your data and slowing down your browsing.
     </p>
     <p>
-      What you do within your browser stays with you. We don&apos;t need to know. Telemetry is disabled within the browser - and only limited data collection is used to keep your browser up to date and secure. Read more in the Privacy Policy.
+      What you do within your browser stays with you. We don't need to know. Telemetry is disabled within the browser - and only limited data collection is used to keep your browser up to date and secure. Read more in the Privacy Policy.
     </p>
   </description>
   
@@ -51,6 +51,9 @@
   </screenshots>
 
   <releases>
+    <release version="6.6.3" date="2025-09-11">
+      <description></description>
+    </release>
     <release version="6.5.7" date="2025-04-29"/>
     <release version="6.5.6" date="2025-03-25"/>
   	<release version="6.5.4" date="2025-02-04"/>
