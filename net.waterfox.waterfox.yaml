@@ -1,11 +1,11 @@
 app-id: net.waterfox.waterfox
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: waterfox
 add-extensions:
   org.freedesktop.Platform.ffmpeg-full:
-    version: '24.08'
+    version: '25.08'
     directory: lib/ffmpeg
     add-ld-path: .
 cleanup-commands:
