@@ -48,7 +48,7 @@ modules:
           type: html
           is-main-source: true
           url: https://waterfox.net/download
-          version-pattern: (\d+\.\d+\.\d+) \(Latest\)
+          version-pattern: (\d+\.\d+\.\d+\.?\d?) \(Latest\)
           url-template: https://cdn1.waterfox.net/waterfox/releases/$version/Linux_x86_64/waterfox-$version.tar.bz2
       - type: file
         path: net.waterfox.waterfox.metainfo.xml
