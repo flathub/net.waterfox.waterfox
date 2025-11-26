@@ -26,6 +26,11 @@ finish-args:
   - --filesystem=xdg-videos:rw
   - --filesystem=xdg-run/speech-dispatcher:ro
   - --filesystem=xdg-run/pipewire-0
+  # Allow importing from other browsers
+  - --filesystem=xdg-config:ro
+  - --filesystem=~/.mozilla:ro
+  - --filesystem=~/.var/app/org.mozilla.firefox/.mozilla:ro
+  - --filesystem=~/snap:ro
   - --device=all
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.FileManager1
