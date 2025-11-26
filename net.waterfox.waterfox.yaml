@@ -41,8 +41,8 @@ modules:
       - ln -sf /app/opt/waterfox/waterfox-bin /app/bin/waterfox
     sources:
       - type: archive
-        url: https://cdn1.waterfox.net/waterfox/releases/6.6.5/Linux_x86_64/waterfox-6.6.5.tar.bz2
-        sha256: b6206ac5d7b3b161944f37813f7d03744922f300e224f5be20e525924eb43a8c
+        url: https://cdn1.waterfox.net/waterfox/releases/6.6.5.1/Linux_x86_64/waterfox-6.6.5.1.tar.bz2
+        sha256: 4d00ad85b740de2f4697944b46454e2bfa23b538f04e5003b66d384c66872270
         dest: waterfox
         x-checker-data:
           type: html
@@ -66,8 +66,8 @@ modules:
       - -Ddocbook_docs=disabled
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.3.tar.xz
-        sha256: ee8f3ef946156ad3406fdf45feedbdcd932dbd211ab4f16f75eba4f36fb2f6c0
+        url: https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.7.tar.xz
+        sha256: 4be15202ec4184fce1ac15997ece5530d2be32fe9573875aeb10e3b573858748
         x-checker-data:
           type: gnome
           name: libnotify
