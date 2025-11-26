@@ -1,11 +1,11 @@
 app-id: net.waterfox.waterfox
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: waterfox
 add-extensions:
   org.freedesktop.Platform.ffmpeg-full:
-    version: '24.08'
+    version: '25.08'
     directory: lib/ffmpeg
     add-ld-path: .
 cleanup-commands:
@@ -19,6 +19,13 @@ finish-args:
   - --socket=cups
   - --persist=.waterfox
   - --filesystem=xdg-download:rw
+  - --filesystem=xdg-desktop:rw
+  - --filesystem=xdg-documents:rw
+  - --filesystem=xdg-music:rw
+  - --filesystem=xdg-pictures:rw
+  - --filesystem=xdg-videos:rw
+  - --filesystem=xdg-run/speech-dispatcher:ro
+  - --filesystem=xdg-run/pipewire-0
   - --device=all
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.FileManager1
@@ -38,7 +45,7 @@ modules:
         /app/share/icons/hicolor/256x256/apps/net.waterfox.waterfox.png
       - install -Dm644 net.waterfox.waterfox.metainfo.xml -t /app/share/metainfo
       - install -Dm644 flatpak-prefs.js -t /app/opt/waterfox/browser/defaults/preferences/
-      - ln -sf /app/opt/waterfox/waterfox-bin /app/bin/waterfox
+      - ln -sf /app/opt/waterfox/waterfox /app/bin/waterfox
     sources:
       - type: archive
         url: https://cdn1.waterfox.net/waterfox/releases/6.6.5.1/Linux_x86_64/waterfox-6.6.5.1.tar.bz2
