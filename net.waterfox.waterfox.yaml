@@ -1,11 +1,11 @@
 app-id: net.waterfox.waterfox
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: waterfox
 add-extensions:
   org.freedesktop.Platform.ffmpeg-full:
-    version: '24.08'
+    version: '25.08'
     directory: lib/ffmpeg
     add-ld-path: .
 cleanup-commands:
@@ -19,6 +19,16 @@ finish-args:
   - --socket=cups
   - --persist=.waterfox
   - --filesystem=xdg-download:rw
+  - --filesystem=xdg-desktop:rw
+  - --filesystem=xdg-documents:rw
+  - --filesystem=xdg-music:rw
+  - --filesystem=xdg-pictures:rw
+  - --filesystem=xdg-videos:rw
+  - --filesystem=xdg-run/speech-dispatcher:ro
+  - --filesystem=xdg-run/pipewire-0
+  # Allow importing from other browsers
+  - --filesystem=~/.mozilla:ro
+  - --filesystem=~/snap:ro
   - --device=all
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.FileManager1
@@ -38,17 +48,17 @@ modules:
         /app/share/icons/hicolor/256x256/apps/net.waterfox.waterfox.png
       - install -Dm644 net.waterfox.waterfox.metainfo.xml -t /app/share/metainfo
       - install -Dm644 flatpak-prefs.js -t /app/opt/waterfox/browser/defaults/preferences/
-      - ln -sf /app/opt/waterfox/waterfox-bin /app/bin/waterfox
+      - ln -sf /app/opt/waterfox/waterfox /app/bin/waterfox
     sources:
       - type: archive
-        url: https://cdn1.waterfox.net/waterfox/releases/6.6.5/Linux_x86_64/waterfox-6.6.5.tar.bz2
-        sha256: b6206ac5d7b3b161944f37813f7d03744922f300e224f5be20e525924eb43a8c
+        url: https://cdn1.waterfox.net/waterfox/releases/6.6.5.1/Linux_x86_64/waterfox-6.6.5.1.tar.bz2
+        sha256: 4d00ad85b740de2f4697944b46454e2bfa23b538f04e5003b66d384c66872270
         dest: waterfox
         x-checker-data:
           type: html
           is-main-source: true
           url: https://waterfox.net/download
-          version-pattern: (\d+\.\d+\.\d+) \(Latest\)
+          version-pattern: (\d+\.\d+\.\d+\.?\d?) \(Latest\)
           url-template: https://cdn1.waterfox.net/waterfox/releases/$version/Linux_x86_64/waterfox-$version.tar.bz2
       - type: file
         path: net.waterfox.waterfox.metainfo.xml
@@ -66,8 +76,8 @@ modules:
       - -Ddocbook_docs=disabled
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.3.tar.xz
-        sha256: ee8f3ef946156ad3406fdf45feedbdcd932dbd211ab4f16f75eba4f36fb2f6c0
+        url: https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.7.tar.xz
+        sha256: 4be15202ec4184fce1ac15997ece5530d2be32fe9573875aeb10e3b573858748
         x-checker-data:
           type: gnome
           name: libnotify
