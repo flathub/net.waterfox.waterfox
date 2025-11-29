@@ -41,12 +41,15 @@
   <screenshots>
     <screenshot type="default">
       <image>https://dl.flathub.org/repo/screenshots/net.waterfox.waterfox-stable/1248x702/net.waterfox.waterfox-590a67e22be41dae0fd59ab95dd38f97.png</image>
+      <caption>Waterfox splash screen</caption>
     </screenshot>
     <screenshot>
       <image>https://dl.flathub.org/repo/screenshots/net.waterfox.waterfox-stable/1248x702/net.waterfox.waterfox-2e3239106513710ca3d9a1fcb943038b.png</image>
+      <caption>Waterfox home page</caption>
     </screenshot>
     <screenshot>
       <image>https://dl.flathub.org/repo/screenshots/net.waterfox.waterfox-stable/1248x702/net.waterfox.waterfox-9dab24d8aebb30557493216e91e4e7b9.png</image>
+      <caption>DuckDuckGo.com home page</caption>
     </screenshot>
   </screenshots>
 
