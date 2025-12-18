@@ -1,23 +1,31 @@
 # net.waterfox.waterfox
 
-Waterfox is a fast, secure, and private web browser built for a modern web.
+Waterfox is a privacy-focused browser built for power users who value customization and control over their online experience.
 
-Important: This flatpak is not affiliated with, in any way, WaterfoxCo Ltd., System1, or the Mozilla Foundation 
+## Privacy & safety defaults
 
-Waterfox gives you a sane way to browse the web. Built with you, the user, in mind.
+- Waterfox routes DNS-over-HTTPS through a Fastly-hosted Oblivious HTTP relay, disables DNS prefetching, and blocks 0.0.0.0 lookups so your DNS traffic stays private.
+- Cookie-banner automation rejects consent prompts whenever possible, HTTPS-First is enforced, Global Privacy Control is declared, and Google Safe Browsing pings stay off.
+- Telemetry, Normandy experiments, analytics, and new tab ad feeds are stripped out - what runs on your machine is the code you installed.
 
-## Tracking Protection
+## Private workflows
 
-Waterfox's Enhanced Tracking Protection safeguards your privacy while you surf. It prevents trackers from following you around the internet and collecting data about your browsing habits and interests without interfering with site operation. It also protects you from malicious programmes like malware that drain your battery.
+- Convert any tab into a Private Tab with isolated history, cookies, and default search, then close it to wipe the session in one move.
+- Tab context shortcuts let you copy single or full tab lists, unload background tabs, or restart the browser with cache-purge options.
+- Everyday ergonomics stay privacy-first: downloads ask before opening new types, scripted pop-ups are forced into tabs, and the classic status bar with link previews is back.
 
-## Private Browsing
+## Customization & layout
 
-Private Browsing does not save your browsing data, such as history or cookies, and does not leave a trail once you log out. Waterfox also includes Enhanced Tracking Protection, which stops hidden trackers from collecting your data and slowing down your browsing.
+- Layout controls move the tab bar, bookmark bar, restart switches, and status bar without touching userChrome.css.
+- Switch between Waterfox, Lepton, and Proton presets, then tune icon weight, padding, autohide behaviour, and rounding from the UI.
+- Legacy userChrome/userContent loading remains enabled for deep themes when you want to go beyond the built-in presets.
 
-## No Telemetry
+## Modern platform
 
-What you do within your browser stays with you. We don't need to know. Telemetry is disabled within the browser - and only limited data collection is used to keep your browser up to date and secure. Read more in the Privacy Policy.
+- WebGPU (including Workers), WebCodecs H.265, Web Share, and other emerging APIs are enabled by default so projects don't need nightly builds.
+- JPEG XL, CSS Masonry, scroll-driven animations, and other experimental layout features are ready to test without hidden flags.
+- Startpage and Waterfox Private Search ship as defaults, and you can assign a separate private-window engine.
 
-![Welcome to Waterfox!](/images/screenshot_1.png)
-![New Tab](/images/screenshot_2.png)
-![Search with Bing, StartPage, or DuckDuckGo](/images/screenshot_3.png)
+![Welcome to Waterfox!](/images/welcome.png)
+![New Tab](/images/newtab_vertical.png)
+![Tree Tabs](/images/treetabs.png)
