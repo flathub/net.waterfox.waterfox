@@ -1,81 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>net.waterfox.waterfox</id>
-  
+
   <name>Waterfox</name>
-  <summary>A lightweight, free and open source web browser built for the modern web</summary>
-  
-  <developer id="net.waterfox">
-    <name>BrowserWorks Ltd.</name>
+  <summary>Private web browser</summary>
+
+  <developer id="works.browser">
+    <name>BrowserWorks</name>
   </developer>
 
   <metadata_license>FSFAP</metadata_license>
   <project_license>MPL-2.0</project_license>
-  
+
+  <branding>
+    <color type="primary" scheme_preference="light">#ebebf6</color>
+    <color type="primary" scheme_preference="dark">#14325d</color>
+  </branding>
+
   <description>
     <p>
-      Important: This flatpak is not affiliated with, in any way, BrowserWorks Ltd. or the Mozilla Foundation
+      Waterfox is a privacy-focused browser built for power users who value customization and control over their online experience. It pairs a privacy-first foundation with the kind of deep customization normally reserved for extensions and hidden flags.
     </p>
     <p>
-      Waterfox gives you a sane way to browse the web. Built with you, the user, in mind.
+      Waterfox routes DNS-over-HTTPS through a Fastly-hosted Oblivious HTTP relay, disables DNS prefetching, blocks 0.0.0.0 lookups, and leaves Safe Browsing calls off so lookups stay private. Cookie-banner automation rejects consent prompts when possible, HTTPS-First is enforced, Global Privacy Control is declared, and telemetry, experiments, analytics, and ad feeds are stripped out.
     </p>
     <p>
-      Waterfox's Enhanced Tracking Protection safeguards your privacy while you surf. It prevents trackers from following you around the internet and collecting data about your browsing habits and interests without interfering with site operation. It also protects you from malicious programmes like malware that drain your battery.
+      Private Tabs let you flip any tab into an isolated session with its own history, cookies, and default search. Tab context shortcuts can copy URLs, unload sleeping tabs, or restart the browser with cache-purge options, while privacy-first ergonomics keep scripted pop-ups in tabs, prompt for new download handlers, and restore the classic status bar with live link previews.
     </p>
     <p>
-      Private Browsing does not save your browsing data, such as history or cookies, and does not leave a trail once you log out. Waterfox also includes Enhanced Tracking Protection, which stops hidden trackers from collecting your data and slowing down your browsing.
-    </p>
-    <p>
-      What you do within your browser stays with you. We don't need to know. Telemetry is disabled within the browser - and only limited data collection is used to keep your browser up to date and secure. Read more in the Privacy Policy.
+      Layout controls move tab bars, bookmark bars, restart switches, and status bars without touching userChrome.css. Switch between Waterfox, Lepton, and Proton presets, adjust icon weight, padding, autohide behaviour, and rounding, or load legacy userChrome and userContent tweaks. Modern web APIs such as WebGPU, WebCodecs H.265, Web Share, JPEG XL, CSS Masonry, and scroll-driven animations are enabled by default, and Startpage plus Waterfox Private Search ship as defaults with a separate private-window engine.
     </p>
   </description>
-  
+
   <launchable type="desktop-id">net.waterfox.waterfox.desktop</launchable>
 
-  <url type="homepage">https://www.waterfox.net/</url>
+  <url type="homepage">https://www.waterfox.com/</url>
   <url type="bugtracker">https://github.com/flathub/net.waterfox.waterfox</url>
-  <url type="help">https://www.waterfox.net/docs/</url>
+  <url type="help">https://www.waterfox.com/support/waterfox-help/</url>
+  <url type="donation">https://buymeacoffee.com/waterfox</url>
+  <url type="translate">https://github.com/BrowserWorks/l10n</url>
+  <url type="vcs-browser">https://github.com/BrowserWorks/Waterfox</url>
+
 
   <content_rating type="oars-1.1"/>
 
   <screenshots>
     <screenshot type="default">
-      <image>https://dl.flathub.org/repo/screenshots/net.waterfox.waterfox-stable/1248x702/net.waterfox.waterfox-590a67e22be41dae0fd59ab95dd38f97.png</image>
-      <caption>Waterfox splash screen</caption>
+      <image>https://www.waterfox.com/images/flathub/welcome.png</image>
+      <caption>Waterfox onboarding</caption>
     </screenshot>
     <screenshot>
-      <image>https://dl.flathub.org/repo/screenshots/net.waterfox.waterfox-stable/1248x702/net.waterfox.waterfox-2e3239106513710ca3d9a1fcb943038b.png</image>
-      <caption>Waterfox home page</caption>
+      <image>https://www.waterfox.com/images/flathub/newtab_vertical.png</image>
+      <caption>Waterfox home page with vertical tabs</caption>
     </screenshot>
     <screenshot>
-      <image>https://dl.flathub.org/repo/screenshots/net.waterfox.waterfox-stable/1248x702/net.waterfox.waterfox-9dab24d8aebb30557493216e91e4e7b9.png</image>
-      <caption>DuckDuckGo.com home page</caption>
+      <image>https://www.waterfox.com/images/flathub/treetabs.png</image>
+      <caption>Wikipedia page with tree tab hierarchy demo in dark mode</caption>
     </screenshot>
   </screenshots>
 
   <releases>
     <release version="6.6.6" date="2025-12-09">
-      <description></description>
+      <url type="details">https://www.waterfox.com/releases/6.6.6/</url>
+      <description>
+        <p>Privacy hardening release that locks geo detection, disables lingering AI code paths, and fixes Private Tabs plus cookie banner handling.</p>
+        <ul>
+          <li>Blocks network-based region lookups, fixes the reported region to a stable value, and keeps Wi-Fi scans disabled.</li>
+          <li>Shuts down the local ML runtime, AI link previews, and Labs migrations so migrated Firefox profiles cannot re-enable those features.</li>
+          <li>Private Tabs now respect the default private search engine, cookie banner controls can be toggled in Settings, the status bar bookmarks menu works again, and MFSA-2025-94 fixes are included.</li>
+        </ul>
+      </description>
     </release>
     <release version="6.6.5.1" date="2025-11-25">
-      <description/>
+      <url type="details">https://www.waterfox.com/releases/6.6.5.1/</url>
+      <description>
+        <p>Quick patch that restores Startpage as the default search engine and fixes Tree Vertical Tabs behaviour.</p>
+        <ul>
+          <li>New installs default to Startpage again, while existing customised search choices stay untouched.</li>
+          <li>Turning off Tree Vertical Tabs now actually unloads the feature and its options only appear under the dedicated settings section.</li>
+        </ul>
+      </description>
     </release>
     <release version="6.6.5" date="2025-11-10">
-      <description/>
+      <url type="details">https://www.waterfox.com/releases/6.6.5/</url>
+      <description>
+        <p>Adds a Ukrainian UI locale, a shortcut to copy the current tab URL, and the latest MFSA-2025-89 security fixes.</p>
+        <ul>
+          <li>Enables Ukrainian localisation across the interface.</li>
+          <li>Introduces Command/Ctrl+Shift+U to copy the active tab’s URL without touching the address bar.</li>
+        </ul>
+      </description>
     </release>
     <release version="6.6.4" date="2025-10-09">
-      <description/>
+      <url type="details">https://www.waterfox.com/releases/6.6.4/</url>
+      <description>
+        <p>Renews the Ecosia partnership, adds Waterfox Private Search, fixes search provider quirks, and polishes Linux integration.</p>
+        <ul>
+          <li>Ecosia is the default search again, a Waterfox Private Search subscription is now available, and Google/Mojeek search issues are resolved.</li>
+          <li>Restores the canonical `waterfox` app/window class on Linux, disables automatic tab grouping by default, and includes MFSA-2025-83 fixes.</li>
+        </ul>
+      </description>
     </release>
     <release version="6.6.3" date="2025-09-11">
-      <description/>
+      <url type="details">https://www.waterfox.com/releases/6.6.3/</url>
+      <description>
+        <p>Polish update that keeps UI themes from bleeding into web content, refines auto tab grouping, and refreshes emoji fonts.</p>
+        <ul>
+          <li>Prevents interface styles from affecting websites, improves theme contrast, and enables the active tab context line by default.</li>
+          <li>Tab groups now wait for session restore before rearranging tabs, collapsing your only group leaves an ungrouped tab, and Emoji 16.0.1 glyphs land for platforms that need them.</li>
+        </ul>
+      </description>
     </release>
-    <release version="6.5.7" date="2025-04-29"/>
-    <release version="6.5.6" date="2025-03-25"/>
-  	<release version="6.5.4" date="2025-02-04"/>
-	<release version="6.5.3" date="2025-01-07"/>
-	<release version="6.5.2" date="2024-11-26"/>
-	<release version="6.5.1" date="2024-11-09"/>
-	<release version="6.5.0" date="2024-10-31"/>
+    <release version="6.5.7" date="2025-04-29">
+      <url type="details">https://www.waterfox.com/releases/6.5.7/</url>
+      <description>
+        <p>Maintenance update with extensive Tree Vertical Tabs polish, stability fixes, and MFSA-2025-29 security patches.</p>
+        <ul>
+          <li>Improves favicons, sidebar/library integration, tab previews, private window stability, and drag-and-drop when using vertical tabs.</li>
+          <li>Announces the open beta of Waterfox Private Search, a privacy-focused meta-search service.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="6.5.6" date="2025-03-25">
+      <url type="details">https://www.waterfox.com/releases/6.5.6/</url>
+      <description>
+        <p>Addresses JPEG-XL security reports, restores WASM sandboxed libraries, and incorporates MFSA-2025-17 fixes.</p>
+        <ul>
+          <li>Ships the patched JPEG-XL library so `.jxl` content can no longer trigger the reported vulnerabilities.</li>
+          <li>Re-enables WASM sandbox libraries now that the release build issues causing their temporary removal are solved.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="6.5.4" date="2025-02-04">
+      <url type="details">https://www.waterfox.com/releases/6.5.4/</url>
+      <description>
+        <p>Security-focused hotfix carrying Mozilla’s MFSA-2025-09 advisories.</p>
+        <p>The Restart button remains missing on Linux and Windows and is tracked as a known issue.</p>
+      </description>
+    </release>
+    <release version="6.5.3" date="2025-01-07">
+      <url type="details">https://www.waterfox.com/releases/6.5.3/</url>
+      <description>
+        <p>Stability release that polishes theming, cleans up default configs, and includes MFSA-2025-02.</p>
+        <ul>
+          <li>Fixes UI theming glitches and removes unused configuration defaults.</li>
+          <li>Notes outstanding issues with the Restart button on Linux/Windows and session restore for some users.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="6.5.2" date="2024-11-26">
+      <url type="details">https://www.waterfox.com/releases/6.5.2/</url>
+      <description>
+        <p>Patch release focusing on theming fixes, vertical tab stability, and MFSA-2024-64 security updates.</p>
+        <p>Restart button and sporadic session-restore issues remain known limitations.</p>
+      </description>
+    </release>
+    <release version="6.5.1" date="2024-11-09">
+      <url type="details">https://www.waterfox.com/releases/6.5.1/</url>
+      <description>
+        <p>Fixes JPEG-XL crashes and restores missing Look &amp; Feel strings while documenting ongoing restart/status bar issues.</p>
+        <ul>
+          <li>Updates the JPEG-XL library so tabs no longer crash when `.jxl` images load.</li>
+          <li>Returns the Look &amp; Feel settings copy so theme options are configurable again.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="6.5.0" date="2024-10-31">
+      <url type="details">https://www.waterfox.com/releases/6.5.0/</url>
+      <description>
+        <p>First stable release on the ESR-128 branch with updated system requirements, performance tuning, and classic tools.</p>
+        <ul>
+          <li>Drops the “G” suffix, raises minimum hardware to SSE3-class CPUs, and retunes code generation for Skylake-era processors.</li>
+          <li>Adds a Preferences table of contents, restores the legacy password manager (`about:passwords`), and reintroduces the classic config manager (`about:cfg`).</li>
+        </ul>
+      </description>
+    </release>
     <release version="6.0.20" date="2024-10-10"/>
     <release version="6.0.19" date="2024-09-05"/>
     <release version="6.0.18" date="2024-08-06"/>
