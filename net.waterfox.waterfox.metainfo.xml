@@ -60,10 +60,13 @@
   </screenshots>
 
   <releases>
+    <release version="6.6.8" date="2026-01-13">
+      <description></description>
+    </release>
     <release version="6.6.7" date="2025-12-19">
       <description>
         <ul>
-            <li>Fixed issue importing Firefox data, available via (Settings > Import browser data)</li>
+            <li>Fixed issue importing Firefox data, available via (Settings &gt; Import browser data)</li>
             <li>Fixed an issue where HDR would be broken on YouTube videos.</li>
             <li>Updated translations for Ukrainian, Indonesian, Portuguese (Brazilian) and French</li>
         </ul>
