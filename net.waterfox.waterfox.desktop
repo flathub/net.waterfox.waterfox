@@ -9,6 +9,7 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xm
 StartupNotify=false
 Comment=A lightweight, free and open source web browser built for the modern web
 Categories=Network;WebBrowser;
+Keywords=Internet;WWW;Browser;Web;Explorer;
 Actions=new-window;new-private-window;profilemanager;
 
 [Desktop Action new-window]
