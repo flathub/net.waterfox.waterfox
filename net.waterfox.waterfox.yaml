@@ -44,8 +44,8 @@ modules:
       - ln -sf /app/opt/waterfox/waterfox /app/bin/waterfox
     sources:
       - type: archive
-        url: https://cdn.waterfox.com/waterfox/releases/6.6.11/Linux_x86_64/waterfox-6.6.11.tar.bz2
-        sha256: d8d7d46902df25bc37e7a7b69ae07477547059cb8bb25dd600154b860cca7621
+        url: https://cdn.waterfox.com/waterfox/releases/6.6.12/Linux_x86_64/waterfox-6.6.12.tar.bz2
+        sha256: e261157aa1a23733b96aee0bb0e31ce62e94690fc0c55f571f579aec701dfa45
         dest: waterfox
         x-checker-data:
           type: html
