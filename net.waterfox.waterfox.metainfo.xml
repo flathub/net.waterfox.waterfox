@@ -61,13 +61,38 @@
 
   <releases>
     <release version="6.6.13" date="2026-05-19">
-      <description></description>
+      <description>
+        <ul>
+          <li>Fixed multiple security vulnerabilities as described in Mozilla Foundation Security Advisory 2026-48.</li>
+          <li>The built-in ad blocker is now enabled by default.</li>
+          <li>Fixed tracking protection not blocking properly due to missing bundled assets.</li>
+          <li>Startpage has been removed as a search provider, with 1.org set as the temporary default.</li>
+          <li>Waterfox Private Search is now $5/month for unmetered, ad free searches.</li>
+          <li>Internationalised domain names are now displayed as unicode instead of punycode for better legibility.</li>
+          <li>CSS dithering is now enabled, reducing colour banding on gradients.</li>
+          <li>Attempted compatibility improvements for websites such as LinkedIn.</li>
+        </ul>
+      </description>
     </release>
     <release version="6.6.12" date="2026-04-21">
-      <description/>
+      <description>
+        <ul>
+          <li>Fixed multiple security vulnerabilities as described in Mozilla Foundation Security Advisory 2026-32.</li>
+          <li>Added a Custom Filter Lists manager so you can add and remove your own filter list URLs from the UI.</li>
+          <li>Improved the Filter Lists screen with search, manual refresh, configurable refresh intervals, and per list status information.</li>
+          <li>Smarter blocker update logic with per list refresh handling, caching, and better error handling.</li>
+          <li>Better cosmetic filtering on web pages.</li>
+          <li>Stricter detection of conflicting ad blocker extensions to reduce false positives.</li>
+        </ul>
+      </description>
     </release>
     <release version="6.6.11" date="2026-04-08">
-      <description/>
+      <description>
+        <ul>
+          <li>Security fixes from the upcoming Gecko 140.10 ESR.</li>
+          <li>Built-in ad blocker available for early testing.</li>
+        </ul>
+      </description>
     </release>
     <release version="6.6.10" date="2026-03-24">
       <description>
