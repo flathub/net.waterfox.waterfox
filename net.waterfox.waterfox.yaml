@@ -44,14 +44,16 @@ modules:
       - ln -sf /app/opt/waterfox/waterfox /app/bin/waterfox
     sources:
       - type: archive
-        url: https://cdn.waterfox.com/waterfox/releases/6.7.6/Linux_x86_64/waterfox-6.7.6.tar.bz2
-        sha256: 93163b68351a58a4d66457219b95ef86fe7066a6524d81bb6cabd747de7a9056
+        url: 
+          https://cdn.waterfox.com/waterfox/releases/6.7.7/Linux_x86_64/waterfox-6.7.7.tar.bz2
+        sha256: f0a1c6200114da53098bbf2dc1273ad1d9eebe0dace4c2ed33b785b199732d60
         dest: waterfox
         x-checker-data:
           type: html
           is-main-source: true
           url: https://www.waterfox.com/download/
-          pattern: <a href="(https://cdn\.waterfox\.com/waterfox/releases/([0-9\.]+)/Linux_x86_64/waterfox-[0-9\.]+\.tar\.bz2)"
+          pattern: <a 
+            href="(https://cdn\.waterfox\.com/waterfox/releases/([0-9\.]+)/Linux_x86_64/waterfox-[0-9\.]+\.tar\.bz2)"
       - type: file
         path: net.waterfox.waterfox.metainfo.xml
       - type: file
