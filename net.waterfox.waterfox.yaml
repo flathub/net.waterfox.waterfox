@@ -45,8 +45,8 @@ modules:
     sources:
       - type: archive
         url: 
-          https://cdn.waterfox.com/waterfox/releases/6.7.7/Linux_x86_64/waterfox-6.7.7.tar.bz2
-        sha256: f0a1c6200114da53098bbf2dc1273ad1d9eebe0dace4c2ed33b785b199732d60
+          https://cdn.waterfox.com/waterfox/releases/6.7.8/Linux_x86_64/waterfox-6.7.8.tar.bz2
+        sha256: 29b8bcc0265fdea7dcf0471c6ef8e296f48ca6973e039b9d181a93e7b654ef15
         dest: waterfox
         x-checker-data:
           type: html
